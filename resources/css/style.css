@@ -4,6 +4,10 @@
   font-size: 18px;
   text-align: center;
 }
+body {
+  padding: 0;
+  margin: 0;
+}
 header {
   align-content: center;
 }
@@ -14,6 +18,7 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+
 .joinUs {
   padding: 3px 8px;
   background-color: #9dc20b;
@@ -38,7 +43,6 @@ h3 {
 p {
   line-height: 1.4;
   font-size: 0.8rem;
-  color: lightgray;
 }
 
 .landing {
@@ -110,4 +114,131 @@ footer {
 }
 footer p {
   font-size: 10px;
+}
+
+.tablet,
+.desktop,
+.landing-join {
+  display: none;
+}
+
+@media screen and (min-width: 450px) {
+  .tablet {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+  nav {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    height: 85px;
+  }
+  nav p {
+    font-size: 16px;
+  }
+  #name {
+    font-size: 1.8rem;
+    margin-right: 15%;
+  }
+  #insta {
+    display: inline-flex;
+    align-items: center;
+  }
+  #insta img {
+    max-height: 15px;
+    margin-left: 8px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .landing {
+    height: 500px;
+  }
+  .container p {
+    font-size: 1.25em;
+  }
+
+  .container.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature p,
+  .feature h3 {
+    text-align: left;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95%;
+  }
+  aside p {
+    text-align: left;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .desktop {
+    display: flex;
+  }
+  nav {
+    margin-right: 0 30px;
+    height: 85px;
+  }
+  #name {
+    margin-right: 50%;
+  }
+  .joinUs,
+  .landing.tablet {
+    display: none;
+  }
+  .landing.desktop {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .landing-join {
+    position: relative;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9dc20a;
+    border: 1px solid #979797;
+    color: white;
+    border-radius: 4px;
+    padding-top: 32px;
+  }
+  #join {
+    font-weight: bold;
+    background-color: #4a4a4a;
+    margin: 26px 80px 56px 80px;
+    padding: 10px 80px;
+  }
+  #email {
+    max-width: 60%;
+    margin: -5px 0;
+  }
+  .container.filter {
+    margin: 0 1%;
+  }
+  aside {
+    margin-bottom: 64px;
+    padding: 50px 0;
+    font-size: 30px;
+  }
 }
